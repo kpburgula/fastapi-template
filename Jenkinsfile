@@ -9,7 +9,8 @@ pipeline{
     }
         stage('Unit testing'){
                 steps{
-                    python3 test_fastapi.py
+                    sh 'uvicorn main:app'
+                    sh 'python3 test_fastapi.py'
                 }
             }
     }

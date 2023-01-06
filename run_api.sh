@@ -4,4 +4,4 @@
 source fastapi-env/bin/activate
 
 # Run the app
-uvicorn main:app &
+uvicorn main:app
