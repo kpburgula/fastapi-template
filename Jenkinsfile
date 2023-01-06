@@ -9,9 +9,9 @@ pipeline{
     }
         stage('Unit testing'){
                 steps{
-                    bash "run_install.sh"
-                    bash "run_start.sh"
-                    bash "run_tests.sh"
+                    sh "run_install.sh"
+                    sh "run_start.sh"
+                    sh "run_tests.sh"
                 }
             }
     }
