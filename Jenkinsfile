@@ -9,7 +9,7 @@ pipeline{
     }
         stage('Unit testing'){
                 steps{
-                    sh "chmod 777 run_install.sh"
+                    
                     sh "./run_install.sh"
                     sh "./run_start.sh"
                     sh "./run_tests.sh"
