@@ -9,10 +9,7 @@ pipeline{
     }
         stage('Unit testing'){
                 steps{
-                    
-                    sh "./run_install.sh"
-                    sh "./run_start.sh"
-                    sh "./run_tests.sh"
+                    python3 test_fastapi.py
                 }
             }
     }
