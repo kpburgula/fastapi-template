@@ -13,14 +13,11 @@ pipeline{
                     sh 'python3 test_fastapi.py'
                 }
             }
-        node{
-            stage('SonarQube Analysis') {
-                def scannerHome = tool 'sonar';
+        stage('SonarQube Analysis') {
+                def scannerHome = tool 'SonarScanner';
                 withSonarQubeEnv() {
                 sh "${scannerHome}/bin/sonar-scanner"
-                }
+            }
         }
-        }
-          
     }
 }
