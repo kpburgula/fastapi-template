@@ -1,6 +1,6 @@
 import unittest
 import requests
-from config import *
+from config.config import *
   
 class SampleTestCase(unittest.TestCase):
   
