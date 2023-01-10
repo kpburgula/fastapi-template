@@ -10,7 +10,7 @@ pipeline{
         stage('Unit testing'){
                 steps{
                     sh 'uvicorn main:app &'
-                    sh 'python3 test_fastapi.py'
+                    sh 'python3 testing/unit_tests/test_fastapi.py'
                 }
             }
         stage('SonarQube Analysis') {
