@@ -23,5 +23,21 @@ pipeline{
                 }
             }
         }
+        stage('Build Docker Image'){
+            steps{
+                sh "docker build . -t kpburgula/fastapi-python-app -f deployment/app_image/Dockerfile"
+            }
+        }
+        stage('Push Docker Image'){
+            steps{
+                sh "docker push kpburgula/fastapi-python-app"
+            }
+        }
+        stage('Acceptance tests'){
+            steps{
+                // this is under development
+                echo "Acceptance tests"
+            }
+        }
     }
 }
