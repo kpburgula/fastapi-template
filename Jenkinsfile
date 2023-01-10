@@ -39,8 +39,7 @@ pipeline{
         }
         stage('QA or Staging deployment'){
             steps{
-                // Pushing the artifact to docker registry or any artifact repository
-                // sh "docker push kpburgula/fastapi-python-app"
+                // Deploying the image and starting the container in the QA or Staging environment
                 echo 'This is Staging deployment [Under development]'
             }
         }
