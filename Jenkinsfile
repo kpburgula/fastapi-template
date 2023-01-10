@@ -23,20 +23,32 @@ pipeline{
                 }
             }
         }
-        stage('Build Docker Image'){
+        stage('Build Docker Image or Packaging Phase'){
             steps{
-                sh "docker build . -t kpburgula/fastapi-python-app -f deployment/app_image/Dockerfile"
+                // This is Build phase
+                // sh "docker build . -t kpburgula/fastapi-python-app -f deployment/app_image/Dockerfile"
+                echo 'This is Build/Packaging phase[Under development]'
             }
         }
-        stage('Push Docker Image'){
+        stage('Pushing artifact to Docker hub/Nexus repo'){
             steps{
-                sh "docker push kpburgula/fastapi-python-app"
+                // Pushing the artifact to docker registry or any artifact repository
+                // sh "docker push kpburgula/fastapi-python-app"
+                echo 'Pushing the artifact to docker hub/Nexus repo [Under development]'
+            }
+        }
+        stage('QA or Staging deployment'){
+            steps{
+                // Pushing the artifact to docker registry or any artifact repository
+                // sh "docker push kpburgula/fastapi-python-app"
+                echo 'This is Staging deployment [Under development]'
             }
         }
         stage('Acceptance tests'){
             steps{
-                // this is under development
-                echo "Acceptance tests"
+                // Running the acceptance tests
+                echo "Acceptance tests using BDD framework like cucumber or behave [Under development]"
+
             }
         }
     }
