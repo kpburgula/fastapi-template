@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-template-app-deployment
+  labels:
+    app: fastapi-template-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fastapi-template-app
+  template:
+    metadata:
+      labels:
+        app: fastapi-template-app
+    spec:
+      containers:
+      - name: fastapi-template-app
+        image: kpburgula/fastapi-template-app
+        ports:
+        - containerPort: 8888
