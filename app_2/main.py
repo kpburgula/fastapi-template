@@ -12,5 +12,6 @@ def home():
 
 @app.get("/test2/{id}")
 def sample_func(id):
+    print(URL)
     result = requests.get(URL + f'/{id}')
-    return result['Value']
+    return result.json()

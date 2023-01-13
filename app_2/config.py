@@ -1,1 +1,1 @@
-URL = f'localhost:8888/test'
+URL = 'http://fastapi-template-app-service:8888/test'
